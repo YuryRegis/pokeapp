@@ -19,7 +19,7 @@ export const BackgroundSquare = styled.div`
 export const Card = styled.div`
   position: relative;
   overflow: hidden;
-  width: 300px;
+  width: 400px;
   padding: 3rem 0 2rem;
   border-radius: 0.5rem;
   color: white;
@@ -40,15 +40,15 @@ export const Content = styled.div`
 `;
 
 export const Icon = styled.div`
-  display: flex;Icon
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   flex: 0 0 auto;
   margin-bottom: 2rem;
-  border-radius: 50px;
-  font-size: 40px;
+  border-radius: 75px;
+  font-size: 90px;
   color: white;
   ${gradiente()};
   box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.25);
