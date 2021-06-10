@@ -1,11 +1,13 @@
 import axios from "axios"
 
 
-const api = axios.create({
+export const api = axios.create({
     headers: { },
     timeout: 1000,
     baseURL: "https://pokeapi.co/api/v2/pokemon/"
 })
 
-
-export default api;
+export async function fecthURL(url) {
+    return await axios.get(url)
+        .catch(erro => console.log(erro))
+}
