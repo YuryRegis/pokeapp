@@ -1,5 +1,5 @@
 import React from "react"
-import styled, {css} from "styled-components"
+import styled from "styled-components"
 
 
 const bacgroudGradiente = (tipo) => {
@@ -26,8 +26,8 @@ const gradiente = (angulo, cor1, cor2) =>
 
 
 const ImgPokemon = styled.img`
-    height: 215px;
-    width: 215px;
+    height: 15vh;
+    width: 15vh;
 `;
 
 const Icon = styled.div`
@@ -35,8 +35,8 @@ const Icon = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 20vh;
+  height: 20vh;
   flex: 0 0 auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
