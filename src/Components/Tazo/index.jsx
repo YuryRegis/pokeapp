@@ -2,27 +2,27 @@ import React from "react"
 import styled from "styled-components"
 
 
-const bacgroudGradiente = (tipo) => {
-    console.log("tipo ->",tipo);
-    switch (String(tipo)) {
-        case 'grass':
-            return gradiente(45, "#56e613", "#e099a1")
-        case 'fire':
-            return gradiente(130, "#ffd747", "#eb0510")
-        case 'water':
-            return gradiente(45, "#00dbde", "#fc00ff")
-        case 'bug':
-            return gradiente(170, "#6bcc8a", "#fce597")
-        case '':
-            return gradiente(130, "#6bcc8a", "#fce597")
-        default:
-            return gradiente()
-    }
+function bacgroudGradiente(tipo) {
+  // console.log("tipo ->",tipo);
+  switch (String(tipo)) {
+    case "grass":
+      return gradiente(45, "#56e613", "#e099a1");
+    case "fire":
+      return gradiente(130, "#ffd747", "#eb0510");
+    case "water":
+      return gradiente(45, "#00dbde", "#fc00ff");
+    case "bug":
+      return gradiente(170, "#6bcc8a", "#fce597");
+    case "":
+      return gradiente(130, "#6bcc8a", "#fce597");
+    default:
+      return gradiente();
+  }
 }
 
-
-const gradiente = (angulo, cor1, cor2) =>
-    `linear-gradient(${angulo || 130}deg, ${cor1 || '#e698e9'} 0%, ${cor2 || '#fce597'} 100%)`;
+function gradiente(angulo, cor1, cor2) {
+    return `linear-gradient(${angulo || 130}deg, ${cor1 || '#e698e9'} 0%, ${cor2 || '#fce597'} 100%)`;
+}
 
 
 const ImgPokemon = styled.img`
@@ -51,10 +51,14 @@ const Icon = styled.div`
 `;
 
 const Tazo = (props) => {
+    const imgArtwork = props.pokemon.sprites.other["official-artwork"].front_default;
+    const imgDefault = props.pokemon.sprites.front_default;
+    const arrayTypes = props.pokemon.types;
+    const paginaHook = props.funcoes.cardHook;
+
     return (
-            <Icon tipo={props.pokemon.types[0].type.name}>
-                {/* <ImgPokemon src={props.pokemon.sprites.front_default}/> */}
-                <ImgPokemon src={props.pokemon.sprites.other["official-artwork"].front_default}/>
+            <Icon tipo={arrayTypes[0].type.name} onClick={paginaHook}>
+                <ImgPokemon src={imgArtwork ? imgArtwork : imgDefault}/>
             </Icon>
     );
 }

@@ -9,7 +9,8 @@ function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main} />
-                <Route path="/card" component={Card} />
+                {/* <Route path="/Card" component={Card} /> */}
+                <Route path="/Card/:id" component={Card} />
             </Switch>
         </BrowserRouter>
     );
