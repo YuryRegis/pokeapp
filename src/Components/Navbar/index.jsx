@@ -18,6 +18,7 @@ function NavBar() {
     return (
         <BarraNavegacao>
             <Logo src="https://logosmarcas.net/wp-content/uploads/2020/05/Pokemon-Logo.png"/>
+            <Logo src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LogoCompasso-positivo.png"/>
         </BarraNavegacao>
     )
 }
