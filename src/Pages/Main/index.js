@@ -71,7 +71,7 @@ function Main(props) {
 
     
     return (
-      <div style={{background:"linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)"}}>
+      <div style={{height:"100vh", background:"linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)"}}>
         <NavBar />
         <div style={{display:"flex", justifyContent:"center"}}>
           <NavButtons funcoes={{proximo: next, voltar: prev}} stepper={{passos: passos, passoAtual: passoAtual}} />

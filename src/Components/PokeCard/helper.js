@@ -51,9 +51,7 @@ export const Icon  = styled.div`
   box-shadow: -6px 0px 29px 15px rgba(255, 255, 255, 0.25);
 `;
 
-export const TipoPokemon = styled.div`
-  font-size: 1.25rem;
-`;
+
 
 export const ImgPokemon = styled.img`
   height: 15vh;

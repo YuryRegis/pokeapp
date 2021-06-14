@@ -1,10 +1,11 @@
-import React, {useState,useEffect} from "react"
-import {Card,   Content, Icon, TipoPokemon, ImgPokemon, BackgroundSquare} from "./helper"
-import ActionButton from '../LinkHome'
-import "../../Assets/CSS/icofont.css"
-import Icognita from "../../Assets/Images/icognita.png";
+import "../../Assets/CSS/icofont.css";
+import ActionButton from "../LinkHome";
 import Titulo from "./Components/Titulo";
+import React, { useState, useEffect } from "react";
+import Icognita from "../../Assets/Images/icognita.png";
 import CardBoxContent from "./Components/CardBoxContent";
+import TagTipoPokemon from "./Components/TagTipoPokemon";
+import { Card, Content, Icon, ImgPokemon, BackgroundSquare } from "./helper";
 
 
 const PokeCard = (props) => {
@@ -13,20 +14,26 @@ const PokeCard = (props) => {
 
   useEffect(() => {
     setData(props.pokeData);
-    if (!data) return
+    if (!data) return;
     setLoading(false);
   });
 
   const defaultImg = data ? data.sprites.front_default : Icognita;
-  const artworkImg = data ? data.sprites.other["official-artwork"].front_default : undefined;
-  const offsetData = data ? (Math.floor(data.id/20)*20) : 0;
- 
+  const artworkImg = data
+    ? data.sprites.other["official-artwork"].front_default
+    : undefined;
+  const offsetData = data ? Math.floor(data.id / 20) * 20 : 0;
+  const arrayTipos = data ? data.types : [];
   return (
-    <div style={{"background":`linear-gradient(45deg,"#e698e9" 0%,"#fce597" 100%)`}}>
-    <Card>
-      <BackgroundSquare />
+    <div
+      style={{
+        background: `linear-gradient(45deg,"#e698e9" 0%,"#fce597" 100%)`,
+      }}
+    >
+      <Card>
+        <BackgroundSquare />
         <Content>
-          <Icon >
+          <Icon>
             {loading ? (
               <ImgPokemon src={defaultImg} />
             ) : (
@@ -35,9 +42,13 @@ const PokeCard = (props) => {
           </Icon>
 
           {loading ? (
-            <TipoPokemon>Carregando...</TipoPokemon>
+            <p>Carregando...</p>
           ) : (
-            <TipoPokemon>{data.types[0].type.name}</TipoPokemon>
+            <div style={{display:"flex", flexDirection:"row"}}>
+              {arrayTipos.map((elemento, index) => {
+                return <TagTipoPokemon key={index} tipo={elemento.type.name}/>
+              })}
+            </div >
           )}
 
           {loading ? <Titulo /> : <Titulo nome={data.name} />}
@@ -49,7 +60,7 @@ const PokeCard = (props) => {
           </ActionButton.linkPaginaAnterior>
           {/* <ActionButton onClick={props.onClick}>Voltar</ActionButton> */}
         </Content>
-    </Card>
+      </Card>
     </div>
   );
 };
