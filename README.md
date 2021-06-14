@@ -1,5 +1,5 @@
 
-# Consumindo API Pokémon com React Native e Styled-Components
+# Consumindo API Pokémon: React + Styled-Components
 
 <p align="center">
   <img src="https://media.giphy.com/media/rSNOd8ItQMtYQaWAnW/giphy.gif">
