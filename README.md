@@ -5,9 +5,9 @@
   <img src="https://media.giphy.com/media/rSNOd8ItQMtYQaWAnW/giphy.gif">
 </p>
 
-Este projeto-desafio teve como finalidade aplicar os estudos adquiridos durante a trilha de React da Compasso UOL.\
+Este projeto-desafio teve como finalidade aplicar os estudos adquiridos durante a trilha de React da Compasso UOL. \
 
-## Desafio proposto:\
+## Desafio proposto:
 - Consumir a API pública da PokeAPI com uma aplicação em `React Native Cli` ou `Expo Bare Workflow`;
 - Obrigatório leitura do endpoint de listagem de todos Pokémons;
 - Os pokémons devem ser exibidos em lista e paginados;
@@ -16,10 +16,10 @@ Este projeto-desafio teve como finalidade aplicar os estudos adquiridos durante 
 ## Recursos utilizados no projeto
 
 ### Material-UI Framework
-Para criação do `Stepper` e da `Barra de Progresso` foi utilizado recursos do [Framework Material-UI](https://www.npmjs.com/package/@material-ui/core).\
+Para criação do `Stepper` e da `Barra de Progresso` foi utilizado recursos do [Framework Material-UI](https://www.npmjs.com/package/@material-ui/core).
 
 <p align="center">
-  <img src="https://media1.tenor.com/images/0833f85ce97511ef45dd1ce652bd54ea/tenor.gif">
+  <img src="https://media.giphy.com/media/qcnyrWCihNlO4pMfa0/giphy.gif">
 </p>
 
 ### React-Router-Dom
@@ -30,8 +30,8 @@ Rotas:
 - `\Card\:id` exibe card do pokémon (informações individuais do pokémon através do seu respectivo ID);
 
 ### Lottie (Lottie )
-Para as animações de `loading` da página foi utilizado o [Lottie](https://airbnb.io/lottie/#/).\
-Lottie é uma biblioteca desenvolida pela Airbnb capaz de converter animações em arquivos JSON com `Bodymovin` que pode ser renderizado nativamente na Web ou no mobile.\
+Para as animações de `loading` da página foi utilizado o [Lottie](https://airbnb.io/lottie/#/). \
+Lottie é uma biblioteca desenvolida pela Airbnb capaz de converter animações em arquivos JSON com `Bodymovin` que pode ser renderizado nativamente na Web ou no mobile. \
 Saiba mais em [Lottie com react-lottie](https://www.npmjs.com/package/react-lottie);
 
 <p align="center">
@@ -40,7 +40,7 @@ Saiba mais em [Lottie com react-lottie](https://www.npmjs.com/package/react-lott
 
 # Projeto criado e gerenciado com YARN e Create React App
 
-Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app).\
+Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Scripts
 
