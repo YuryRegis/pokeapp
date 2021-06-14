@@ -1,0 +1,150 @@
+{
+    "pokemon": {
+        "tipo": {
+            "bug": {
+                "corTag": "#729f3f",
+                "corTazo": {
+                    "cor_1": "#6bcc8a",
+                    "cor_2": "#fce597",
+                    "angulo": 170
+                }
+            },
+            "dragon": {
+                "corTag": "#53a4cf",
+                "corTazo": {
+                    "cor_1": "#eca263",
+                    "cor_2": "#f9edc5",
+                    "angulo": 170
+                }
+            },
+            "fairy": {
+                "corTag": "#fdb9e9",
+                "corTazo": {
+                    "cor_1": "#f18499",
+                    "cor_2": "#f4dae3",
+                    "angulo": -20
+                }
+            },
+            "fire": {
+                "corTag": "#fd7d24",
+                "corTazo": {
+                    "cor_1": "#ffd747",
+                    "cor_2": "#eb0510",
+                    "angulo": 45
+                }
+            },
+            "ghost": {
+                "corTag": "#7b62a3",
+                "corTazo": {
+                    "cor_1": "#b70df2",
+                    "cor_2": "black",
+                    "angulo": 45
+                }
+            },
+            "ground": {
+                "corTag": "#f7de3f",
+                "corTazo": {
+                    "cor_1": "#684132",
+                    "cor_2": "pink",
+                    "angulo": -15
+                }
+            },
+            "normal": {
+                "corTag": "#a4acaf",
+                "corTazo": {
+                    "cor_1": "#e698e9",
+                    "cor_2": "#fce597",
+                    "angulo": 130
+                }
+            },
+            "psychic": {
+                "corTag": "#f366b9",
+                "corTazo": {
+                    "cor_1": "orange",
+                    "cor_2": "cyan",
+                    "angulo": 130
+                }
+            },
+            "steel": {
+                "corTag": "#9eb7b",
+                "corTazo": {
+                    "cor_1": "#B0C4DE",
+                    "cor_2": "#D8D8D8",
+                    "angulo": 45
+                }
+            },
+            "dark": {
+                "corTag": "#707070",
+                "corTazo": {
+                    "cor_1": "#130212",
+                    "cor_2": "purple",
+                    "angulo": 130
+                }
+            },
+            "electric": {
+                "corTag": "#eed535",
+                "corTazo": {
+                    "cor_1": "#eca300",
+                    "cor_2": "#F0FB3E",
+                    "angulo": -15
+                }
+            },
+            "fighting": {
+                "corTag": "#d56723",
+                "corTazo": {
+                    "cor_1": "#ab1f20",
+                    "cor_2": "yellow",
+                    "angulo": 45
+                }
+            },
+            "flying": {
+                "corTag": "#3dc7ef",
+                "corTazo": {
+                    "cor_1": "#69c9e1",
+                    "cor_2": "#cdb9bb",
+                    "angulo": 45
+                }
+            },
+            "grass": {
+                "corTag": "#9bcc50",
+                "corTazo": {
+                    "cor_1": "#56e613",
+                    "cor_2": "#e099a1",
+                    "angulo": 45
+                }
+            },
+            "ice": {
+                "corTag": "#51c4e7",
+                  "corTazo": {
+                    "cor_1": "#f1f4fb",
+                    "cor_2": "#b2caee",
+                    "angulo": -20
+                } 
+            },
+            "poison": {
+                "corTag": "#b97fc9",
+                "corTazo": {
+                    "cor_1": "#b70df2",
+                    "cor_2": "#eb0510",
+                    "angulo": 45
+                }
+            },
+            "rock": {
+                "corTag": "#a38c21",
+                "corTazo": {
+                    "cor_1": "#81847d",
+                    "cor_2": "#f1f0ec",
+                    "angulo": -20
+                }
+            },
+            "water": {
+                "corTag": "#4592c4",
+                "corTazo": {
+                    "cor_1": "#00dbde",
+                    "cor_2": "#fc00ff",
+                    "angulo": 45
+                }
+            }
+        }
+    }
+}

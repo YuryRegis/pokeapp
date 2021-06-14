@@ -8,6 +8,9 @@ export const api = axios.create({
 })
 
 export async function fecthURL(url) {
-    return await axios.get(url)
-        .catch(erro => console.log(erro))
+    const resposta = await axios.get(url)
+        .catch(erro => console.log(erro));
+    // console.log("Axios LOG ->", resposta);
+    return resposta
+        
 }
