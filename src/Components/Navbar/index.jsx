@@ -3,11 +3,11 @@ import styled from "styled-components"
 
 
 const Logo = styled.img`
-    height: 10vh;
+    height: 9vh;
 `;
 
 const BarraNavegacao = styled.nav`
-    height: 10vh;
+    height: 9vh;
     display: flex;
     padding: 0 5vw;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 import "../../Assets/CSS/icofont.css";
-import ActionButton from "../LinkHome";
+import LinkHomeButton from "../LinkHomeButton";
 import Titulo from "./Components/Titulo";
 import React, { useState, useEffect } from "react";
 import Icognita from "../../Assets/Images/icognita.png";
@@ -35,7 +35,7 @@ const PokeCard = (props) => {
         <Content>
           <Icon>
             {loading ? (
-              <ImgPokemon src={defaultImg} />
+              <ImgPokemon src={Icognita} />
             ) : (
               <ImgPokemon src={artworkImg ?? defaultImg} />
             )}
@@ -55,9 +55,8 @@ const PokeCard = (props) => {
 
           {loading ? <CardBoxContent /> : <CardBoxContent data={data} />}
 
-          <ActionButton.linkPaginaAnterior to={`/${offsetData}`}>
-            Voltar
-          </ActionButton.linkPaginaAnterior>
+          <LinkHomeButton text={"Voltar"} to={`/${offsetData}`}/>
+            
           {/* <ActionButton onClick={props.onClick}>Voltar</ActionButton> */}
         </Content>
       </Card>

@@ -1,27 +1,28 @@
-import React, {useState, useEffect} from "react";
 import {api, fecthURL} from "../../api";
-import NavBar from "../../Components/Navbar";
-import NavButtons from "../../Components/NavButtons";
 import Tazo from "../../Components/Tazo";
 import {useHistory} from "react-router-dom";
+import NavBar from "../../Components/Navbar";
+import React, {useState, useEffect} from "react";
+import NavButtons from "../../Components/NavButtons";
+import LoadingPikachu from "../../Components/LoadingPikachu";
 
 
 function Main(props) {
-    const _offset = props.match.params;
-    const [offset, setOffset] = useState(_offset ? _offset.offset : 0);
+    const _offset = props.match.params.offset;
+    const [offset, setOffset] = useState(_offset ? _offset : 0);
 
     const [pokeData, setData] = useState([]);
     const [prevURL, setPrevURL] = useState('');
     const [nextURL, setNextURL] = useState('');
     const [passos, setPassos] = useState(0);
-    const [passoAtual, setPassoAtual] = useState(_offset ? (_offset.offset/20) : 0);
+    const [passoAtual, setPassoAtual] = useState(_offset ? (_offset/20) : 0);
     const [loadingStatus, setLoadingStatus] = useState(true);
-
-    const getURL = () => `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`;
 
     const historico = useHistory();
 
     useEffect( () => {
+      const getURL = () => `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`;
+      
       async function fetchData() {
         let URL = getURL();
         const resposta = await api.get(URL);
@@ -71,10 +72,18 @@ function Main(props) {
 
     
     return (
-      <div style={{height:"100vh", background:"linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)"}}>
+      <div
+        style={{
+          height: "100vh",
+          background: "linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)",
+        }}
+      >
         <NavBar />
-        <div style={{display:"flex", justifyContent:"center"}}>
-          <NavButtons funcoes={{proximo: next, voltar: prev}} stepper={{passos: passos, passoAtual: passoAtual}} />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <NavButtons
+            funcoes={{ proximo: next, voltar: prev }}
+            stepper={{ passos: passos, passoAtual: passoAtual }}
+          />
         </div>
         <div
           style={{
@@ -86,7 +95,7 @@ function Main(props) {
           }}
         >
           {loadingStatus ? (
-            <h1>Carregando...</h1>
+            <LoadingPikachu />
           ) : (
             <>
               <div
@@ -97,11 +106,17 @@ function Main(props) {
                   flexWrap: "wrap",
                 }}
               >
-                {pokeData.map((pokemon, index) => {     
+                {pokeData.map((pokemon, index) => {
                   const cardHook = () => {
-                    historico.push(`/Card/${pokemon.data.id}`)
-                  }
-                  return <Tazo key={index} pokemon={pokemon.data} funcoes={{cardHook: cardHook}}/>;
+                    historico.push(`/Card/${pokemon.data.id}`);
+                  };
+                  return (
+                    <Tazo
+                      key={index}
+                      pokemon={pokemon.data}
+                      funcoes={{ cardHook: cardHook }}
+                    />
+                  );
                 })}
               </div>
             </>

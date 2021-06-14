@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PokeCard from "../../Components/PokeCard";
 import NavBar from "../../Components/Navbar";
 import { fecthURL } from "../../api";
+import LoadingPikachu from "../../Components/LoadingPikachu";
 
 
 
@@ -40,21 +41,24 @@ const Card = (props) => {
 
 
   return (
-    <div style={{background:"linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)", display:"flex", flexDirection:"column", height:"100vh" }}>
+    <div
+      style={{
+        background: "linear-gradient(190deg, #FFF8E7 0%, #d9e39a 100%)",
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh"
+      }}
+    >
       <NavBar />
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "60px",
-          // height: "50vh",
+          paddingTop: "4vh"
         }}
       >
-        {
-        loading ? <h1>Carregando...</h1> : (
-            <PokeCard pokeData={pokeData} /> )
-        }
+        {loading ? <LoadingPikachu/> : <PokeCard pokeData={pokeData} />}
       </div>
     </div>
   );

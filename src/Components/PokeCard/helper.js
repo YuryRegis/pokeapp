@@ -18,7 +18,7 @@ export const Card = styled.div`
   position: relative;
   overflow: hidden;
   width: 450px;
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 1.3rem;
   border-radius: 5rem;
   color: white;
   box-shadow: 
