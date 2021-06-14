@@ -3,23 +3,27 @@ import {api, fecthURL} from "../../api";
 import NavBar from "../../Components/Navbar";
 import NavButtons from "../../Components/NavButtons";
 import Tazo from "../../Components/Tazo";
-import {useHistory, useLocation} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
-const URL = 'https://pokeapi.co/api/v2/pokemon';
 
 function Main(props) {
+    const _offset = props.match.params;
+    const [offset, setOffset] = useState(_offset ? _offset.offset : 0);
+
     const [pokeData, setData] = useState([]);
     const [prevURL, setPrevURL] = useState('');
     const [nextURL, setNextURL] = useState('');
     const [passos, setPassos] = useState(0);
-    const [passoAtual, setPassoAtual] = useState(0);
+    const [passoAtual, setPassoAtual] = useState(_offset ? (_offset.offset/20) : 0);
     const [loadingStatus, setLoadingStatus] = useState(true);
 
+    const getURL = () => `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`;
+
     const historico = useHistory();
-    const location  = useLocation();
 
     useEffect( () => {
       async function fetchData() {
+        let URL = getURL();
         const resposta = await api.get(URL);
         await loadingPokemon(resposta.data.results);
         setNextURL(resposta.data.next);
@@ -36,7 +40,8 @@ function Main(props) {
       await loadingPokemon(newData.data.results);
       setNextURL(newData.data.next);
       setPrevURL(newData.data.previous);
-      setPassoAtual(passo => passoAtual + 1)
+      setPassoAtual(passo => passoAtual + 1);
+      setOffset(nextOffset => offset + 20);
       setLoadingStatus(false);
     }
 
@@ -48,6 +53,7 @@ function Main(props) {
       setNextURL(newData.data.next);
       setPrevURL(newData.data.previous);
       setPassoAtual(passo => passoAtual - 1);
+      setOffset(prevOffset => offset - 20);
       setLoadingStatus(false);
     }
 
@@ -91,18 +97,9 @@ function Main(props) {
                   flexWrap: "wrap",
                 }}
               >
-                {pokeData.map((pokemon, index) => {
-                  
-                  function cardHook() {
-                    location.state = {
-                      nextURL: nextURL,
-                      prevURL: prevURL,
-                      pokemon: pokemon,
-                      indice: index
-                    }
-                    console.log("prevLocation", location.state);
-                    // return historico.push("/Card");
-                    return historico.push(`/Card/${pokemon.data.id}`)
+                {pokeData.map((pokemon, index) => {     
+                  const cardHook = () => {
+                    historico.push(`/Card/${pokemon.data.id}`)
                   }
                   return <Tazo key={index} pokemon={pokemon.data} funcoes={{cardHook: cardHook}}/>;
                 })}

@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react"; 
-import PokeCard from "../../Components/PokeCard/PokeCard";
+import PokeCard from "../../Components/PokeCard";
 import NavBar from "../../Components/Navbar";
-import { useLocation } from "react-router-dom"
 import { fecthURL } from "../../api";
-import { BackgroundSquare } from "../../Components/PokeCard";
 
 
 
 const Card = (props) => {
   const pokeID = props.match.params.id;
-  const endpoint = `https://pokeapi.co/api/v2/pokemon/${pokeID}`;  
-  // const loc = useLocation()
-  // console.log("Location Card -> ",loc);
 
 
   const [id, setID] = useState(pokeID);
@@ -58,7 +53,7 @@ const Card = (props) => {
       >
         {
         loading ? <h1>Carregando...</h1> : (
-            <PokeCard onClick={props.history.goBack} pokeData={pokeData} /> )
+            <PokeCard pokeData={pokeData} /> )
         }
       </div>
     </div>
