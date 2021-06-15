@@ -65,6 +65,9 @@ No diretório raiz do projeto, use:
 ### `npm install yarn`
 Para instalar o Yarn. 
 
+### `yarn install`
+Instala as dependências necessárias para rodar o projeto/aplicação.
+
 ### `yarn start`
 
 Inicializa a aplicação no modo de desenvolvimento.
@@ -83,7 +86,6 @@ Saiba mais em [executando tests](https://facebook.github.io/create-react-app/doc
 Compila o aplicativo para produção na pasta `build`.\
 Ele agrupa corretamente o React no modo de produção e otimiza a construção para o melhor desempenho.
 
-TA compilação é reduzida e os nomes dos arquivos incluem os hashes. \
 Seu aplicativo está pronto para ser implantado!
 
 Saiba mais em [desenvolvimento](https://facebook.github.io/create-react-app/docs/deployment).
