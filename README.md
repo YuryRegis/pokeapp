@@ -38,13 +38,17 @@ Para as animações de `loading` da página foi utilizado o [Lottie](https://air
 Lottie é uma biblioteca desenvolida pela Airbnb capaz de converter animações em arquivos JSON com `Bodymovin` que pode ser renderizado nativamente na Web ou no mobile. \
 Saiba mais em [Lottie com react-lottie](https://www.npmjs.com/package/react-lottie);
 
-<p align="center">
+<div align="center">
   <img src="https://media.giphy.com/media/CbF0iM6MEBhWn9AB6t/giphy.gif">
-</p>
+  <p text-size="0.5rem"> <b>Créditos de arte</b> </p>
+  <p>
+    - Pikachu: <a href="https://lottiefiles.com/user/309694"> Ben Kuhlmann</a>
+  </p>
+  <p>
+    - Loading text: <a href="https://lottiefiles.com/user/309694"> Jian Zhang</a>
+  </p>
+</div>
 
-#### Créditos de arte
-- Pikachu: [Ben Kuhlmann](https://lottiefiles.com/user/309694);
-- Loading text: [Jian Zhang](https://lottiefiles.com/user/124972)
 
 ### Styled-Components
 Para componentizar estilos CSS com React JS.
