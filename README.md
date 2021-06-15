@@ -38,9 +38,13 @@ Saiba mais em [Lottie com react-lottie](https://www.npmjs.com/package/react-lott
   <img src="https://media.giphy.com/media/CbF0iM6MEBhWn9AB6t/giphy.gif">
 </p>
 
-# Projeto criado e gerenciado com YARN e Create React App
+#### Créditos de arte
+- Pickachu: [Ben Kuhlmann](https://lottiefiles.com/user/309694);
+- Loading text: [Jian Zhang](https://lottiefiles.com/user/124972)
 
-Este projeto foi inicializado com [Create React App](https://github.com/facebook/create-react-app). 
+# Projeto criado e gerenciado com YARN e CRA
+
+Este projeto foi inicializado com [Create React App (CRA)](https://github.com/facebook/create-react-app). 
 
 ## Scripts
 
