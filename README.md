@@ -29,9 +29,9 @@ Para criação do `Stepper` e da `Barra de Progresso` foi utilizado recursos do 
 ### React-Router-Dom
 Para construção e gerenciamento de rotas foi utilizado o [React Router](https://reactrouter.com/web/guides/quick-start). \
 Rotas:
-- `\` Raiz;
-- `\:offset` id(offset) de paginação;
-- `\Card\:id` exibe card do pokémon (informações individuais do pokémon através do seu respectivo ID);
+- `/` Raiz;
+- `/:offset` id(offset) de paginação;
+- `/Card/:id` exibe card do pokémon (informações individuais do pokémon através do seu respectivo ID);
 
 ### Lottie (Lottie )
 Para as animações de `loading` da página foi utilizado o [Lottie](https://airbnb.io/lottie/#/). \
