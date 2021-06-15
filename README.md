@@ -15,6 +15,10 @@ Este projeto-desafio teve como finalidade aplicar os estudos adquiridos durante 
 
 ## Recursos utilizados no projeto
 
+### Axios
+Para requisições para API do Pokémon ([PokeAPI](https://pokeapi.co/)).
+Saiba mais em [axios](https://www.npmjs.com/package/axios).
+
 ### Material-UI Framework
 Para criação do `Stepper` e da `Barra de Progresso` foi utilizado recursos do [Framework Material-UI](https://www.npmjs.com/package/@material-ui/core).
 
@@ -39,8 +43,12 @@ Saiba mais em [Lottie com react-lottie](https://www.npmjs.com/package/react-lott
 </p>
 
 #### Créditos de arte
-- Pickachu: [Ben Kuhlmann](https://lottiefiles.com/user/309694);
+- Pikachu: [Ben Kuhlmann](https://lottiefiles.com/user/309694);
 - Loading text: [Jian Zhang](https://lottiefiles.com/user/124972)
+
+### Styled-Components
+Para componentizar estilos CSS com React JS.
+Saiba mais em [styled-components site](https://styled-components.com/).
 
 # Projeto criado e gerenciado com YARN e CRA
 
